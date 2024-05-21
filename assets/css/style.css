@@ -1,0 +1,457 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#page>header {
+  grid-area: head;
+  background-color: #f7fafa;
+}
+
+#page>.respmenu {
+  grid-area: nav;
+  background-color: #c7dede;
+
+}
+
+#page>main {
+  grid-area: main;
+  background-color: #b7d5d5;
+}
+
+#page>footer {
+  grid-area: foot;
+  background-color: #b0d1d1;
+}
+
+#page {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas:
+    "nav"
+    "head"
+    "main"
+    "foot";
+  grid-template-columns: 1fr;
+}
+
+.respmenu a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 2px solid #E7F1F1;
+  max-width: 200px;
+  background: #dfecec;
+  font-variant: small-caps;
+  text-shadow: 1px 1px black;
+}
+
+.respmenu input[type="checkbox"],
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  font-size: 48px;
+  pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.respmenu {
+  color: black;
+  position: relative;
+  background: #dfecec;
+  min-height: 48px;
+}
+
+.respmenu nav {
+  display: none;
+}
+
+.respmenu input:checked~nav {
+  display: block;
+}
+
+.respmenu input:checked~.fa-bars {
+  display: none;
+}
+
+.respmenu input:not(:checked)~.fa-times {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+nav img {
+  width: 130px;
+  height: 150px;
+}
+
+nav div {
+  padding: 25px 10px;
+}
+
+
+nav h3 {
+  color: #71a1ff;
+}
+
+nav h3 i {
+  color: #71ffcf;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.fa-bars {
+  width: 100px;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+}
+
+.orden,
+.filtro {
+  width: 100%;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.inicio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.inicio div {
+  text-align: center;
+  width: 100%;
+}
+
+.inicio div div {
+  margin: 5px 0px;
+  width: 100%;
+}
+
+.inicio button {
+  background-color: #ffa08c;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.inicio h1 {
+  text-align: center;
+}
+
+.botones {
+  margin: 0 auto;
+  padding: 15px 0;
+
+}
+
+.galery img {
+  --b: 5px;
+  /* the border thickness */
+  --d: 20px;
+  /* the distance from the edge */
+  --o: 15px;
+  /* the offset on hover */
+  --s: 1;
+  /* the direction of the hover effect (+1 or -1)*/
+
+  --_d: calc(var(--d) + var(--s)*1em);
+  --_g: calc(100% - 2*(var(--_d) + var(--b)));
+  --_m:
+    conic-gradient(from 90deg at var(--_d) var(--_d), #0000 25%, #000 0) 0 0/calc(100% - var(--_d)) calc(100% - var(--_d)),
+    linear-gradient(#000 0 0) 50%/var(--_g) var(--_g) no-repeat;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  font-size: 0;
+  cursor: pointer;
+  transition: .35s;
+}
+
+.galery img:hover {
+  font-size: var(--o);
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  max-width: 200px;
+}
+
+.cinta img {
+  max-width: none;
+  height: auto;
+}
+
+.cinta2 img {
+  max-width: none;
+  height: auto;
+}
+
+.somos h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.quienes {
+  text-align: justify;
+}
+
+.quienes p {
+  padding: 20px;
+}
+
+.contacto h1 {
+  text-align: center;
+}
+
+.formulario {
+  background-color: white;
+  width: 90%;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.contact_form {
+  width: 100%;
+}
+
+
+.formulario h1 {
+  font-size: 25px;
+  text-align: justify;
+  padding: 20px 0;
+}
+
+.formulario h3 {
+  font-size: 15px;
+}
+
+.caja {
+  display: flex;
+  justify-content: center;
+}
+
+.ubi {
+  background-color: #eff5f5;
+  width: 100%;
+  height: auto;
+  padding: 2px;
+  margin: 10px;
+  text-align: center;
+}
+
+.horario {
+  background-color: #eff5f5;
+  width: 100%;
+  height: auto;
+  padding: 2px;
+  margin: 10px;
+  text-align: center;
+
+}
+
+.mapita {
+  text-align: center;
+  width: 100%;
+  height: 550px;
+  margin: 0 auto;
+}
+
+iframe {
+  width: 90%;
+  height: 400px;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+
+footer h2 {
+  text-align: center;
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.social {
+  display: flex;
+  justify-content: center;
+  position: static;
+  top: 100px;
+  z-index: 2000;
+}
+
+.social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.social ul li {
+  width: 75px;
+  margin: 5px;
+}
+
+.social ul li a {
+  display: inline-block;
+  font-size: 8px;
+  color: #fff;
+  width: 80%;
+  text-align: center;
+  background: #000;
+  padding: 5px 10px;
+  text-decoration: none;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.social ul li .icon-facebook {
+  background: #3b5998;
+  border-radius: 15%;
+}
+
+.social ul li .icon-instagram {
+  background: #de37d0;
+  border-radius: 15%;
+}
+
+.social ul li .icon-mail {
+  background: #666666;
+  border-radius: 15%;
+}
+
+.social ul li .icon-whatsapp {
+  background: #97d848;
+  border-radius: 15%;
+}
+
+.social ul li a:hover {
+  background: #000;
+  padding: 10px 30px;
+}
+
+
+@media (min-width:576px) {
+  #page {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "nav head"
+      "nav main"
+      "foot main";
+    grid-template-columns: 150px auto;
+  }
+
+  .inicio div {
+    width: 25%;
+  }
+
+  .respmenu {
+    text-align: center;
+  }
+
+  .respmenu nav {
+    display: block;
+    text-align: initial;
+  }
+
+  .respmenu img {
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .boton_menu,
+  .respmenu .fa-bars,
+  .respmenu .fa-times {
+    display: none;
+  }
+
+
+  .contacto h1 {
+    text-align: center;
+  }
+
+  .contact_form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .formulario {
+    width: 450px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .caja {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ubi {
+    background-color: #eff5f5;
+    width: 40%;
+    height: 200px;
+    padding: 20px;
+  }
+
+  .horario {
+    background-color: #eff5f5;
+    width: 40%;
+    padding: 20px;
+  }
+
+  .social ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
